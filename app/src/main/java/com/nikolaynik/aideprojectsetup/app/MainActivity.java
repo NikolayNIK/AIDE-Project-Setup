@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
 			@Override
 			public LuaValue call(LuaValue p1) {
-				setTitle(p1.tojstring());
+				getSupportActionBar().setTitle(p1.tojstring());
 				return NIL;
 			}
 		});
