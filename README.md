@@ -21,22 +21,24 @@ To communicate with users templates may (or may not) use graphical items (pre-de
 * arg0 **string** - id of an item to return.
 * return - lua representation of item that was found by passed id.
 
-### Function *new__Item__*(arg0, arg1)
+### Function _new**Item**_(arg0, arg1)
+**UI thread only**.
 * arg0 **string** - id of a new item.
 * arg1 **string** - title for new item (may be *nil*).
 * return - lua representation of new item.
 
 Available items:
-1. Text
-1. EditText
-1. Destination
-1. Check
-1. MultiChoose
-1. SingleChoose
+1. **Text**
+1. **EditText**
+1. **Destination**
+1. **Check**
+1. **MultiChoose**
+1. **SingleChoose**
 
 `//TODO Docs for every one`
 
 ### Function *finish*()
+**UI thread only**.
 Finishes template's activity. Not recommended to use.
 
 ### Function *runOnUiThread*(arg0)
@@ -49,19 +51,23 @@ Finishes template's activity. Not recommended to use.
 * arg0 **boolean** - if false (default is true) the destination is not empty dialog would not be shown.
 
 ### Function *enableFab*()
+**UI thread only**.
 Makes it possible for user to click generate button.
 
 ### Function *disableFab*()
+**UI thread only**.
 Makes it impossible for user to click generate button.
 
 ### Function *setTitle*(arg0)
-UI thread only.
+**UI thread only**.
 * arg0 **string** - a title of activity to be shown (default is name of template).
 
 ### Function *splitCard*()
-makes any items created after appear on a new card.
+**UI thread only**.
+Makes any items created after appear on a new card.
 
 ### Function *snackbar*(arg0, arg1, arg2)
+**UI thread only**.
 * arg0 **string** - snackbar message.
 * arg1 **string** - snackbar duration (0 — long, -1 — short, -2 — indefinite).
 * arg2 **array of 2**: (may be nil)
