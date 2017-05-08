@@ -15,13 +15,13 @@ Files in template are described by:
 
 Script @/create.lua is executed on UI thread when template is first created.
 As an any UI thread method its execution should not take more that 5 seconds or the application will be considered as not responding.
-To communicate with users templates may (or may not) use graphical items (pre-defined group of android views). Items can be created and modified by UI thread only! Getters may be safely called by any other.
+To communicate with users templates may (or may not) use graphical items (pre-defined group of android views). Items can be created and modified by **UI thread only**. Getters may be safely called by any other.
 
-### Function findByID(arg0)
+### Function *findByID*(arg0)
 * arg0 **string** - id of an item to return.
 * return - lua representation of item that was found by passed id.
 
-### Function new*Item*(arg0, arg1)
+### Function *new__Item__*(arg0, arg1)
 * arg0 **string** - id of a new item.
 * arg1 **string** - title for new item (may be *nil*).
 * return - lua representation of new item.
@@ -34,41 +34,42 @@ Available items:
 1. MultiChoose
 1. SingleChoose
 
-'TODO Docs for every one'
+`//TODO Docs for every one`
 
-### Function finish()
+### Function *finish*()
 Finishes template's activity. Not recommended to use.
 
-### Function runOnUiThread(arg0)
+### Function *runOnUiThread*(arg0)
 * arg0 **function** - a function to be called on UI thread.
 
-### Function runOnNewThread(arg0)
+### Function *runOnNewThread*(arg0)
 * arg0 **function** - a function to be called on a new thread.
 
-### Function setEmptyRecomended(arg0)
+### Function *setEmptyRecomended*(arg0)
 * arg0 **boolean** - if false (default is true) the destination is not empty dialog would not be shown.
 
-### Function enableFab()
+### Function *enableFab*()
 Makes it possible for user to click generate button.
 
-### Function disableFab()
+### Function *disableFab*()
 Makes it impossible for user to click generate button.
 
-### Function setTitle(arg0)
+### Function *setTitle*(arg0)
+UI thread only.
 * arg0 **string** - a title of activity to be shown (default is name of template).
 
-### Function splitCard()
+### Function *splitCard*()
 makes any items created after appear on a new card.
 
-### Function snackbar(arg0, arg1, arg2)
+### Function *snackbar*(arg0, arg1, arg2)
 * arg0 **string** - snackbar message.
 * arg1 **string** - snackbar duration (0 — long, -1 — short, -2 — indefinite).
 * arg2 **array of 2**: (may be nil)
 	* item1 **string** - action text.
 	* item2 **function** - function that will called when user clicks an action.
 
-### Function sleep(arg0)
+### Function *sleep*(arg0)
 * arg0 **long** - number of milliseconds for thread to be suspended by.
 
-# To be continued...
-'TODO Fix misspellings'
+# **To be continued...**
+`//TODO Fix misspellings`
