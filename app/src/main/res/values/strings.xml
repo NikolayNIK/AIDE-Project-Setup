@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">AIDE Project Setup</string>
+	<string name="settings_name">Settings</string>
+
+
+	<string name="item_settings">Settings</string>
+	<string name="item_internal">Internal</string>
+	<string name="item_external">Local</string>
+	<string name="item_remote">Remote</string>
+
+
+	<string name="pref_use_spaces_key">spaces_use</string>
+	<string name="pref_use_spaces_title">Use spaces</string>
+	<string name="pref_use_spaces_summary">Use spaces instead of tabs</string>
+
+	<string name="pref_spaces_count_key">spaces_count</string>
+	<string name="pref_spaces_count_title">Count of spaces</string>
+	<string name="pref_spaces_count_summary">Amount of spaces per one tab</string>
+
+	<string name="pref_unite_destination_key">unite_destination</string>
+	<string name="pref_unite_destination_title">Unite destination</string>
+	<string name="pref_unite_destination_summary">Unite project destination across all templates</string>
+
+	<string name="pref_destination">destination</string>
+
+
+	<string name="snack_permission">The app can\'t function properly without storage permission</string>
+	<string name="snack_permission_action">Request</string>
+	
+	<string name="snack_repeat_permission">Why would you click a button if you won\'t allow the permission?!</string>
+	<string name="snack_repeat_permission_action">Try to allow</string>
+	
+
+	<string name="dialog_generating_title">Generating...</string>
+	<string name="dialog_generating_message">Please, wait...</string>
+
+	<string name="dialog_new_folder_title">New Folder:</string>
+	<string name="dialog_new_folder_hint">Name</string>
+	
+	<string name="dialog_destination_title">Destination isn\'t empty</string>
+	<string name="dialog_destination_message">Destination is file or not empty directory. Would you like to remove it first?</string>
+	<string name="dialog_destination_empty">Empty</string>
+	<string name="dialog_destination_ignore">Ignore</string>
+
+
+	<string name="text_external_hint">Local templates stored in /sdcard/AppTemplates/ folder</string>
+	<string name="text_remote_hint">Remote templates aren\'t implemented yet</string>
+	
+</resources>

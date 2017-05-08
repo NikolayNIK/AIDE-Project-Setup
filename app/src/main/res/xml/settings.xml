@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<CheckBoxPreference
+		android:key="@string/pref_unite_destination_key"
+		android:title="@string/pref_unite_destination_title"
+		android:summary="@string/pref_unite_destination_summary"
+		android:defaultValue="true" />
+
+	<CheckBoxPreference
+		android:key="@string/pref_use_spaces_key"
+		android:title="@string/pref_use_spaces_title"
+		android:summary="@string/pref_use_spaces_summary"
+		android:defaultValue="false" />
+
+	<EditTextPreference
+		android:key="@string/pref_spaces_count_key"
+		android:title="@string/pref_spaces_count_title"
+		android:summary="@string/pref_spaces_count_summary"
+		android:inputType="number"
+		android:dependency="@string/pref_use_spaces_key"
+		android:defaultValue="4" />
+
+</PreferenceScreen>

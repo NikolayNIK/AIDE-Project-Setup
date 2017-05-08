@@ -1,0 +1,9 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/Item.Row" >
+
+	<TextView style="@style/Item.Title" />
+
+	<LinearLayout style="@style/Item.Content"
+		android:orientation="vertical" />
+
+</TableRow>

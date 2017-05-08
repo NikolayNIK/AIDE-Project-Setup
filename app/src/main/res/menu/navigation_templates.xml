@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/item_internal"
+		android:icon="@drawable/ic_storage_black_24dp"
+        android:title="@string/item_internal" />
+
+    <item
+        android:id="@+id/item_external"
+		android:icon="@drawable/ic_sd_storage_black_24dp"
+        android:title="@string/item_external" />
+
+    <item
+        android:id="@+id/item_remote"
+		android:icon="@drawable/ic_language_black_24dp"
+        android:title="@string/item_remote" />
+    
+</menu>
