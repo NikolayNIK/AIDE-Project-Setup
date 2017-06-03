@@ -129,7 +129,6 @@ public class DestinationItem extends EditTextItem implements OnClickListener {
 			}
 		});
 
-		directory = Environment.getExternalStorageDirectory();
 		updateList.run();
 
 		AlertDialog.Builder adb = new AlertDialog.Builder(getContext());
@@ -161,6 +160,7 @@ public class DestinationItem extends EditTextItem implements OnClickListener {
 
 	@Override
 	public void onClick(View p1) {
+		directory = getText().length() > 0 ? new File(getText()) : Environment.getExternalStorageDirectory();
 		getBrowseDialog().show();
 	}
 
