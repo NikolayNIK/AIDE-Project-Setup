@@ -129,7 +129,12 @@ public class DestinationItem extends EditTextItem implements OnClickListener {
 			}
 		});
 
-		updateList.run();
+		try {
+			updateList.run();
+		} catch(Throwable e) {
+			directory = Environment.getExternalStorageDirectory();
+			updateList.run();
+		}
 
 		AlertDialog.Builder adb = new AlertDialog.Builder(getContext());
 		adb.setTitle("Add");
