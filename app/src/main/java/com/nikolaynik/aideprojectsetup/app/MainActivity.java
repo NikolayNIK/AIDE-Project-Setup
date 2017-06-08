@@ -19,6 +19,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import com.nikolaynik.aideprojectsetup.R;
 import com.nikolaynik.aideprojectsetup.item.ButtonItem;
+import com.nikolaynik.aideprojectsetup.item.CheckItem;
 import com.nikolaynik.aideprojectsetup.item.DestinationItem;
 import com.nikolaynik.aideprojectsetup.item.EditTextItem;
 import com.nikolaynik.aideprojectsetup.item.Item;
@@ -50,7 +51,6 @@ import org.luaj.vm2.lib.ThreeArgFunction;
 import org.luaj.vm2.lib.TwoArgFunction;
 import org.luaj.vm2.lib.ZeroArgFunction;
 import org.luaj.vm2.lib.jse.JsePlatform;
-import com.nikolaynik.aideprojectsetup.item.CheckItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -117,6 +117,11 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void onClickFab(View view) {
+		if(destinationItem == null) {
+			Snackbar.make(fab, R.string.snack_no_destination, Snackbar.LENGTH_INDEFINITE).show();
+			return;
+		}
+		
 		destination = new File(destinationItem.getText());
 		if(isEmptyRecomended) {
 			if(destination.exists()) {
@@ -596,13 +601,7 @@ public class MainActivity extends AppCompatActivity {
 							for(Pair<String, String> item: replacements)
 								line = line.replace(item.first, item.second);
 
-						int i = 0;
-						while(i < line.length() && line.charAt(i) == '\t') {
-							line = line.replaceFirst("\t", spaces);
-							i += spacesCount;
-						}
-
-						writer.write(line);
+						writer.write(line.replace("\t", spaces));
 					}
 					
 					writer.write('\n');
