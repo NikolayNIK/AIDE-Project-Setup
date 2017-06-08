@@ -32,6 +32,8 @@ public class TemplatesActivity extends AppCompatActivity implements BottomNaviga
 	public static final int REQUEST_INITIAL = 0;
 	public static final int REQUEST_ITEM_CLICK = 1;
 	public static final int REQUEST_EXT_LOAD = 2;
+
+	public static final Uri LINK_ABOUT = Uri.parse("https://github.com/NikolayNIK/AIDE-Project-Setup");
 	
 	private TextView empty;
 	private ListView list;
@@ -80,6 +82,9 @@ public class TemplatesActivity extends AppCompatActivity implements BottomNaviga
 		switch(item.getItemId()){
 			case R.id.item_settings:
 				startActivity(new Intent(this, SettingsActivity.class));
+				return true;
+			case R.id.item_about:
+				startActivity(new Intent(Intent.ACTION_VIEW, LINK_ABOUT));
 				return true;
 			default:
 				return false;

@@ -1,5 +1,4 @@
 # AIDE Project Setup App
-## Why
 The AIDE is a great app providing android programming for android itself.
 For now it can create application projects by one template ignoring "use tabs" options and using damn space instead!
 This app is a powerfull tool to provide projects for AIDE for your choise and your requests.
